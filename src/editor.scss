@@ -1,0 +1,25 @@
+$primaryColor: #4527a4;
+
+.bBlocksInspectorInfo {
+	padding: 6px;
+
+	a {
+		text-decoration: none;
+		font-weight: 700;
+	}
+}
+
+.wp-block-b-blocks-test-purpose{
+	.selectHelp{
+		color: #616063;
+	}
+	.button-container{
+		display: flex;
+		gap: 6px;
+		}
+		.delete-btn, .delete-btn:hover{
+			border: 1px solid red;
+			color: red;
+
+		}
+}
