@@ -16,7 +16,7 @@ const Edit = (props) => {
         <Style attributes={attributes} id={`block-${clientId}`} />
 
         <div className="bBlocksTestPurpose">
-        <MarqueeText attributes={attributes} />
+        <MarqueeText attributes={attributes} setAttributes={setAttributes} />
         </div>
       </div>
     </>

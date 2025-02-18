@@ -164,7 +164,7 @@ $primaryColor: #4527a4;
 	/*! CSS Used from: https://pixellyo.com/nextai/html/assets/css/style.css */.blend-x
 {
 	-webkit-mask: linear-gradient(90deg, transparent, rgba(109, 89, 89, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, transparent);
-	mask: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, transparent);
+	mask: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8)100%, transparent);
 }
 .list
 {
@@ -224,9 +224,24 @@ $primaryColor: #4527a4;
 	// background-color: #070707;
 	// border: 1px solid red;
 }
-.icon svg{
-	width: 20px;
-    height: 100%;
+// .icon svg {
+//     width: 15px !important;
+//     height: 15px !important;
+// }
+.tricker{
+	// background-color: #191a1c;
+	// color: white;
+	// border: 1px solid red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// gap: 0px;
+	
+	
+}
+.name,.icon{
+
+
 
 }
 .add-ticker-btn {

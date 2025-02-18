@@ -1,7 +1,7 @@
-import { getColorsCSS } from '../../../../bpl-tools/utils/getCSS';
+import { getBoxCSS, getColorsCSS } from '../../../../bpl-tools/utils/getCSS';
 
 const Style = ({ attributes, id }) => {
-	const { colors,isHover } = attributes;
+	const { colors,isHover,tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize} = attributes;
 
 	const mainSl = `#${id}`;
 	const blockSl = `${mainSl} .bBlocksTestPurpose`;
@@ -16,6 +16,18 @@ const Style = ({ attributes, id }) => {
 {
 	animation-play-state:${isHover?"paused":"running"}
 }
+	.tricker{
+		${getColorsCSS(tickerColors)}
+		padding:${getBoxCSS(tickerPadding)};
+		border-radius:${getBoxCSS(tickerRadius)};
+		gap:${tickerGap};
+
+	}
+		.tricker svg{
+		fill:${tickerIcon};
+		width:${iconSize};
+		height:${iconSize};
+		}
 
 	`}} />;
 }

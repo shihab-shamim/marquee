@@ -1,5 +1,8 @@
-const MarqueeText = ({ attributes }) => {
+import { RichText } from '@wordpress/block-editor';
+import { updateData } from '../../../../bpl-tools/utils/functions';
+const MarqueeText = ({ attributes ,isShow,setAttributes}) => {
   const { trickers } = attributes;
+  
 
   return (
     <div className="blend-x container">
@@ -13,16 +16,19 @@ const MarqueeText = ({ attributes }) => {
             >
               <ul className="list list-row scroller-x__list gap-4">
                 {trickers.map((tricker, index) => (
-                  <li key={index}>
-                    <span className=" tricker d-inline-flex align-items-center gap-2 py-3 px-6 rounded-3 bg-light bg-opacity-5 text-light text-opacity-70">
+                  <li className="ticker" key={index}>
+                    <span className=" tricker">
                       <span
                         dangerouslySetInnerHTML={{ __html: tricker?.icon }}
                         className="d-inline-block flex-shrink-0 icon"
                       />
-                      <span className="d-block fw-medium">
+                      {isShow?<span className='name'>
                         
-                        {tricker?.name}
-                      </span>
+                        {tricker?.name} 
+                      </span>:<RichText className='name' value={tricker?.name} onChange={(value)=>{
+                        setAttributes({trickers: updateData(trickers,value,index,'name')})
+
+                      }}></RichText>}
                     </span>
                   </li>
                 ))}
@@ -31,16 +37,19 @@ const MarqueeText = ({ attributes }) => {
             <div className="scroller-x" data-direction="left" data-speed="slow">
             <ul className="list list-row scroller-x__list gap-4">
                 {trickers.map((tricker, index) => (
-                  <li key={index}>
-                    <span className=" tricker d-inline-flex align-items-center gap-2 py-3 px-6 rounded-3 bg-light bg-opacity-5 text-light text-opacity-70">
+                  <li className="ticker" key={index}>
+                    <span className=" tricker">
                       <span
                         dangerouslySetInnerHTML={{ __html: tricker?.icon }}
                         className="d-inline-block flex-shrink-0 icon"
                       />
-                      <span className="d-block fw-medium">
+                      {isShow?<span className='name'>
                         
-                        {tricker?.name}
-                      </span>
+                        {tricker?.name} 
+                      </span>:<RichText className='name' value={tricker?.name} onChange={(value)=>{
+                        setAttributes({trickers: updateData(trickers,value,index,'name')})
+
+                      }}></RichText>}
                     </span>
                   </li>
                 ))}

@@ -1,19 +1,14 @@
-import { useState } from "react";
 import { __ } from "@wordpress/i18n";
 import {
   PanelBody,
   __experimentalBoxControl as BoxControl,
+  __experimentalUnitControl as UnitControl
 } from "@wordpress/components";
-import { ColorsControl } from "../../../../../../bpl-tools/Components";
+import { ColorControl, ColorsControl } from "../../../../../../bpl-tools/Components";
 
 const Style = ({ attributes, setAttributes }) => {
-  const { colors } = attributes;
-  const [values, setValues] = useState({
-    top: "50px",
-    left: "10px",
-    right: "10px",
-    bottom: "50px",
-  });
+  const { tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize} = attributes;
+
 
 
 
@@ -22,15 +17,40 @@ const Style = ({ attributes, setAttributes }) => {
       <PanelBody
       
         className="bPlPanelBody"
-        title={__("Purpose styles title", "b-blocks")}
+        title={__("Ticker", "b-blocks")}
         initialOpen={false}
       >
         <ColorsControl
-          value={colors}
-          onChange={(val) => setAttributes({ colors: val })}
+          value={tickerColors}
+          onChange={(val) => setAttributes({ tickerColors: val })}
           defaults={{ color: "black", bg: "#B1C5A4" }}
         />
-        <BoxControl values={values} onChange={setValues} />
+        <BoxControl label="Padding" values={tickerPadding} onChange={(value)=>{
+          setAttributes({ tickerPadding: value })
+        }} />
+        <BoxControl label="Radius" values={tickerRadius} onChange={(value)=>{
+          setAttributes({ tickerRadius: value })
+        }} />
+        <UnitControl
+	onChange={ value => setAttributes({tickerGap: value})}
+	onUnitChange={ e => console.log("new unit") }
+	label="Gap"
+  units={[{ value: 'px', label: 'px' }]}
+
+	value={ tickerGap } />
+
+        <ColorControl label="Icon Color" value={tickerIcon} onChange={value=>{
+          setAttributes({ tickerIcon: value })
+        }} />
+         <UnitControl
+	onChange={ value => setAttributes({iconSize: value})}
+	onUnitChange={ e => console.log("new unit") }
+	label="Icon Size"
+  units={[{ value: 'px', label: 'px' }]}
+
+	value={ iconSize } />
+
+
       </PanelBody>
     </>
   );

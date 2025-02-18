@@ -1,9 +1,9 @@
 import { __ } from '@wordpress/i18n';
 
-import { FormToggle, PanelBody, SelectControl } from '@wordpress/components';
+import { FormToggle, PanelBody, SelectControl, TextControl } from '@wordpress/components';
 import { purposeTypeOptions } from '../../../../utils/options';
 import { updateData } from '../../../../utils/functions';
-import { Label } from '../../../../../../bpl-tools/Components';
+import { IconLibrary, Label } from '../../../../../../bpl-tools/Components';
 
 
 const General = ({ attributes, setAttributes }) => {
@@ -18,6 +18,20 @@ const General = ({ attributes, setAttributes }) => {
 
       {
         trickers.map((tracker, index) =><PanelBody key={index} className='bPlPanelBody' title={__(`Ticker-${index+1}(${tracker.name})`, 'b-blocks')} initialOpen={false} >
+          <TextControl
+	label="Name"
+	value={tracker?.name}
+	onChange={ e =>{
+     setAttributes({trickers: updateData(trickers,e,index,'name')})
+  }}
+	type="text"
+/>
+<IconLibrary label="Icon" value={tracker?.icon} onChange={(value)=>{
+  // setAttributes({trickers: updateData(trickers,value,index,'icon')})
+  // console.log(value);
+  setAttributes({trickers: updateData(trickers,value,index,'icon')})
+
+}} />
 
 <div className="button-container">
   <button

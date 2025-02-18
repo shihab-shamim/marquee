@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		createRoot(blockNameEl).render(<>
 			<Style attributes={attributes} id={blockNameEl.id} />
 
-			<MarqueeText attributes={attributes}></MarqueeText>
+			<MarqueeText isShow={true} attributes={attributes}></MarqueeText>
 		</>);
 
 		blockNameEl?.removeAttribute('data-attributes');
