@@ -102,67 +102,67 @@ $primaryColor: #4527a4;
 	font-weight:500!important
 }
 // text color
-.text-light
-{
-	--bs-text-opacity:1;
-	color:rgba(var(--bs-light-rgb),var(--bs-text-opacity))!important
-}
+// .text-light
+// {
+// 	--bs-text-opacity:1;
+// 	color:rgba(var(--bs-light-rgb),var(--bs-text-opacity))!important
+// }
 // background color
-.bg-light
-{
-	--bs-bg-opacity:1;
-	background-color:rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important
-}
-.bg-dark
-{
-	--bs-bg-opacity:1;
-	background-color:rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important
-}
-.rounded-3
-{
-	border-radius:var(--bs-border-radius-lg)!important
-}
+// .bg-light
+// {
+// 	--bs-bg-opacity:1;
+// 	background-color:rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important
+// }
+// .bg-dark
+// {
+// 	--bs-bg-opacity:1;
+// 	background-color:rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important
+// }
+// .rounded-3
+// {
+// 	border-radius:var(--bs-border-radius-lg)!important
+// }
 	.bi::before,[class*=" bi-"]::before
-{
-	display:inline-block;
-	font-family:bootstrap-icons!important;
-	font-style:normal;
-	font-weight:normal!important;
-	font-variant:normal;
-	text-transform:none;
-	line-height:1;
-	vertical-align:-0.125em;
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale
-}
-.bi-camera-reels::before
-{
-	content:"\f21b"
-}
-.bi-cart3::before
-{
-	content:"\f244"
-}
-.bi-facebook::before
-{
-	content:"\f344"
-}
-.bi-image::before
-{
-	content:"\f42a"
-}
-.bi-coin::before
-{
-	content:"\f634"
-}
-.bi-graph-up-arrow::before
-{
-	content:"\f673"
-}
-.bi-quote::before
-{
-	content:"\f6b0"
-}
+// {
+// 	display:inline-block;
+// 	font-family:bootstrap-icons!important;
+// 	font-style:normal;
+// 	font-weight:normal!important;
+// 	font-variant:normal;
+// 	text-transform:none;
+// 	line-height:1;
+// 	vertical-align:-0.125em;
+// 	-webkit-font-smoothing:antialiased;
+// 	-moz-osx-font-smoothing:grayscale
+// }
+// .bi-camera-reels::before
+// {
+// 	content:"\f21b"
+// }
+// .bi-cart3::before
+// {
+// 	content:"\f244"
+// }
+// .bi-facebook::before
+// {
+// 	content:"\f344"
+// }
+// .bi-image::before
+// {
+// 	content:"\f42a"
+// }
+// .bi-coin::before
+// {
+// 	content:"\f634"
+// }
+// .bi-graph-up-arrow::before
+// {
+// 	content:"\f673"
+// }
+// .bi-quote::before
+// {
+// 	content:"\f6b0"
+// }
 // .blend-x
 .container {
 	// background: black;
@@ -181,14 +181,15 @@ $primaryColor: #4527a4;
 	  transparent
 	);
   }
-.list
+.ticker-list
 {
 	--direction:column;
 	display:flex;
-	flex-direction:var(--direction);
+	flex-direction:row;
 	margin:0;
 	padding:0;
-	list-style:none
+	list-style:none;
+	
 }
 .list-row
 {

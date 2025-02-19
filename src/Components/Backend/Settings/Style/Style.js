@@ -4,16 +4,24 @@ import {
   __experimentalBoxControl as BoxControl,
   __experimentalUnitControl as UnitControl
 } from "@wordpress/components";
-import { ColorControl, ColorsControl } from "../../../../../../bpl-tools/Components";
+import { ColorControl, ColorsControl, Typography } from "../../../../../../bpl-tools/Components";
 
 const Style = ({ attributes, setAttributes }) => {
-  const { tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize} = attributes;
+  const { tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize,tickerTypho} = attributes;
 
-
+console.log(tickerTypho);
 
 
   return (
     <>
+    <PanelBody
+    className="bPlPanelBody"
+    title={__(" Ticker Section", "b-blocks")}
+    initialOpen={false}
+    
+    >
+
+    </PanelBody>
       <PanelBody
       
         className="bPlPanelBody"
@@ -25,6 +33,9 @@ const Style = ({ attributes, setAttributes }) => {
           onChange={(val) => setAttributes({ tickerColors: val })}
           defaults={{ color: "black", bg: "#B1C5A4" }}
         />
+        <Typography value={tickerTypho} onChange={(value)=>{
+          setAttributes({tickerTypho: value })
+        }} />
         <BoxControl label="Padding" values={tickerPadding} onChange={(value)=>{
           setAttributes({ tickerPadding: value })
         }} />

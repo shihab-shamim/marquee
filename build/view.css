@@ -77,62 +77,14 @@
 .wp-block-b-blocks-test-purpose .fw-medium {
   font-weight: 500 !important;
 }
-.wp-block-b-blocks-test-purpose .text-light {
-  --bs-text-opacity:1;
-  color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
-}
-.wp-block-b-blocks-test-purpose .bg-light {
-  --bs-bg-opacity:1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
-}
-.wp-block-b-blocks-test-purpose .bg-dark {
-  --bs-bg-opacity:1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-}
-.wp-block-b-blocks-test-purpose .rounded-3 {
-  border-radius: var(--bs-border-radius-lg) !important;
-}
-.wp-block-b-blocks-test-purpose .bi::before, .wp-block-b-blocks-test-purpose [class*=" bi-"]::before {
-  display: inline-block;
-  font-family: bootstrap-icons !important;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  vertical-align: -0.125em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.wp-block-b-blocks-test-purpose .bi-camera-reels::before {
-  content: "\f21b";
-}
-.wp-block-b-blocks-test-purpose .bi-cart3::before {
-  content: "\f244";
-}
-.wp-block-b-blocks-test-purpose .bi-facebook::before {
-  content: "\f344";
-}
-.wp-block-b-blocks-test-purpose .bi-image::before {
-  content: "\f42a";
-}
-.wp-block-b-blocks-test-purpose .bi-coin::before {
-  content: "\f634";
-}
-.wp-block-b-blocks-test-purpose .bi-graph-up-arrow::before {
-  content: "\f673";
-}
-.wp-block-b-blocks-test-purpose .bi-quote::before {
-  content: "\f6b0";
-}
-.wp-block-b-blocks-test-purpose .container {
+.wp-block-b-blocks-test-purpose .bi::before, .wp-block-b-blocks-test-purpose [class*=" bi-"]::before .container {
   -webkit-mask: linear-gradient(90deg, transparent, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent);
   mask: linear-gradient(90deg, transparent, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%, transparent);
 }
-.wp-block-b-blocks-test-purpose .list {
+.wp-block-b-blocks-test-purpose .ticker-list {
   --direction:column;
   display: flex;
-  flex-direction: var(--direction);
+  flex-direction: row;
   margin: 0;
   padding: 0;
   list-style: none;

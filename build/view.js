@@ -533,13 +533,17 @@ const Style = ({
     tickerIcon,
     tickerRadius,
     tickerGap,
-    iconSize
+    iconSize,
+    tickerTypho
   } = attributes;
   const mainSl = `#${id}`;
   const tricker = `${mainSl} .tricker`;
+  const name = `${tricker} .name`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", {
     dangerouslySetInnerHTML: {
       __html: `
+		${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)('', tickerTypho)?.googleFontLink}
+${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(name, tickerTypho)?.styles}
 		
 		
 			.scroller-x__list:hover
@@ -606,7 +610,7 @@ const MarqueeText = ({
     "data-direction": "right",
     "data-speed": "slow"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "list list-row scroller-x__list gap-4"
+    className: "ticker-list list-row scroller-x__list gap-4"
   }, trickers.map((tricker, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     className: "ticker",
     key: index
@@ -632,7 +636,7 @@ const MarqueeText = ({
     "data-direction": "left",
     "data-speed": "slow"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "list list-row scroller-x__list gap-4"
+    className: "ticker-list list-row scroller-x__list gap-4"
   }, trickers.map((tricker, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     className: "ticker",
     key: index
