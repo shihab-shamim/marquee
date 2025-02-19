@@ -191,23 +191,23 @@ $primaryColor: #4527a4;
 	list-style:none;
 	
 }
-.list-row
+.ticker-list-row
 {
 	--direction:row
 }
-.scroller-x
+.ticker-scroller-x
 {
 	overflow:hidden
 }
-.scroller-x[data-direction=right]
+.ticker-scroller-x[data-direction=right]
 {
 	--_animation-direction:reverse
 }
-.scroller-x[data-speed=slow]
+.ticker-scroller-x[data-speed=slow]
 {
 	--_animation-duration:60s
 }
-.scroller-x__list
+.ticker-scroller-x__list
 {
 	width:-moz-max-content;
 	width:max-content;
@@ -215,7 +215,7 @@ $primaryColor: #4527a4;
 	animation:scroll var(--_animation-duration,60s) var(--_animation-direction,forwards) linear infinite
 }
 
-.scroller-x__list>li
+.ticker-scroller-x__list>li
 {
 	flex-shrink:0
 }

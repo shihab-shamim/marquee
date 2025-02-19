@@ -89,25 +89,25 @@
   padding: 0;
   list-style: none;
 }
-.wp-block-b-blocks-test-purpose .list-row {
+.wp-block-b-blocks-test-purpose .ticker-list-row {
   --direction:row ;
 }
-.wp-block-b-blocks-test-purpose .scroller-x {
+.wp-block-b-blocks-test-purpose .ticker-scroller-x {
   overflow: hidden;
 }
-.wp-block-b-blocks-test-purpose .scroller-x[data-direction=right] {
+.wp-block-b-blocks-test-purpose .ticker-scroller-x[data-direction=right] {
   --_animation-direction:reverse ;
 }
-.wp-block-b-blocks-test-purpose .scroller-x[data-speed=slow] {
+.wp-block-b-blocks-test-purpose .ticker-scroller-x[data-speed=slow] {
   --_animation-duration:60s ;
 }
-.wp-block-b-blocks-test-purpose .scroller-x__list {
+.wp-block-b-blocks-test-purpose .ticker-scroller-x__list {
   width: -moz-max-content;
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 60s) var(--_animation-direction, forwards) linear infinite;
 }
-.wp-block-b-blocks-test-purpose .scroller-x__list > li {
+.wp-block-b-blocks-test-purpose .ticker-scroller-x__list > li {
   flex-shrink: 0;
 }
 .wp-block-b-blocks-test-purpose .section-space-xsm-y {

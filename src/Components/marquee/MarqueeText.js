@@ -10,11 +10,11 @@ const MarqueeText = ({ attributes ,isShow,setAttributes}) => {
         <div className="row">
           <div className="col-12">
             <div
-              className="scroller-x mb-4"
+              className="ticker-scroller-x mb-4"
               data-direction="right"
               data-speed="slow"
             >
-              <ul className="ticker-list list-row scroller-x__list gap-4">
+              <ul className="ticker-list ticker-list-row ticker-scroller-x__list gap-4">
                 {trickers.map((tricker, index) => (
                   <li className="ticker" key={index}>
                     <span className=" tricker">
@@ -34,8 +34,8 @@ const MarqueeText = ({ attributes ,isShow,setAttributes}) => {
                 ))}
               </ul>
             </div>
-            <div className="scroller-x" data-direction="left" data-speed="slow">
-            <ul className="ticker-list list-row scroller-x__list gap-4">
+            <div className="ticker-scroller-x" data-direction="left" data-speed="slow">
+            <ul className="ticker-list ticker-list-row ticker-scroller-x__list gap-4">
                 {trickers.map((tricker, index) => (
                   <li className="ticker" key={index}>
                     <span className=" tricker">

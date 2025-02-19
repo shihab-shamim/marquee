@@ -606,11 +606,11 @@ const MarqueeText = ({
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "col-12"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "scroller-x mb-4",
+    className: "ticker-scroller-x mb-4",
     "data-direction": "right",
     "data-speed": "slow"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "ticker-list list-row scroller-x__list gap-4"
+    className: "ticker-list ticker-list-row ticker-scroller-x__list gap-4"
   }, trickers.map((tricker, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     className: "ticker",
     key: index
@@ -632,11 +632,11 @@ const MarqueeText = ({
       });
     }
   })))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "scroller-x",
+    className: "ticker-scroller-x",
     "data-direction": "left",
     "data-speed": "slow"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "ticker-list list-row scroller-x__list gap-4"
+    className: "ticker-list ticker-list-row ticker-scroller-x__list gap-4"
   }, trickers.map((tricker, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     className: "ticker",
     key: index
