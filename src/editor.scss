@@ -22,8 +22,12 @@ $primaryColor: #4527a4;
 			color: red;
 
 		}
-		.components-grid{
+		.components-grid,.components-flex{
 			margin-top: 8px !important;
 		}
+		.components-flex{
+			margin-bottom: 8px !important;
+		}
+
 
 }
