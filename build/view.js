@@ -537,17 +537,16 @@ const Style = ({
     tickerTypho,
     tickerSection,
     alignment,
-    containerBg
+    containerBg,
+    containerMargin,
+    containerPadding,
+    containerRadius
   } = attributes;
   const mainSl = `#${id}`;
   const tricker = `${mainSl} .tricker`;
   const name = `${tricker} .name`;
   const container = `${mainSl} .container`;
-  // .container{
-  // 	background-color: rgb(3, 3, 3);
-
-  // }
-
+  const wrapper = `${mainSl} .wrapper`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", {
     dangerouslySetInnerHTML: {
       __html: `
@@ -574,14 +573,19 @@ ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(name, tick
 		${container}{
 			width:${tickerSection};
 			background-color:${containerBg};
+			padding:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(containerPadding)};
+			border-radius:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(containerRadius)};
+			overflow:hidden;
 
 			
 			}
-			.wrapper{
+		${wrapper}{
 			width:100%;
 			display:flex;
 			justify-content:${alignment};
 			align-items:center;
+			margin:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(containerMargin)};
+
 			}
 
 	`

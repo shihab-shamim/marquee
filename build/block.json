@@ -143,6 +143,33 @@
     "containerBg": {
       "type": "string",
       "default": "#030303"
+    },
+    "containerMargin": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      }
+    },
+    "containerPadding": {
+      "type": "object",
+      "default": {
+        "top": "50px",
+        "right": "0px",
+        "bottom": "50px",
+        "left": "0px"
+      }
+    },
+    "containerRadius": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      }
     }
   },
   "supports": {

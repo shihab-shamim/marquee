@@ -7,7 +7,8 @@ import {
 import { ColorControl, ColorsControl, Typography } from "../../../../../../bpl-tools/Components";
 
 const Style = ({ attributes, setAttributes }) => {
-  const { tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize,tickerTypho,tickerSection,containerBg} = attributes;
+  const { tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize,tickerTypho,tickerSection,containerBg,containerMargin,containerPadding,containerRadius} = attributes;
+
 
 
 
@@ -32,6 +33,16 @@ const Style = ({ attributes, setAttributes }) => {
   <ColorControl value={containerBg} label={__("Background Color", "b-blocks")} onChange={(value)=>{
     setAttributes({containerBg: value })
   }} />
+  <BoxControl label="Margin" values={containerMargin} onChange={(value)=>{
+          setAttributes({ containerMargin: value })
+        }} />
+  <BoxControl label="Padding" values={containerPadding} onChange={(value)=>{
+          setAttributes({ containerPadding: value })
+        }} />
+  <BoxControl label="Radius" values={containerRadius} onChange={(value)=>{
+          setAttributes({ containerRadius: value })
+        }} />
+   
       
 
     </PanelBody>

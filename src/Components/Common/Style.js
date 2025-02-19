@@ -1,16 +1,14 @@
 import { getBoxCSS, getColorsCSS,getTypoCSS } from '../../../../bpl-tools/utils/getCSS';
 
 const Style = ({ attributes, id }) => {
-	const { colors,isHover,tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize,tickerTypho,tickerSection,alignment,containerBg} = attributes;
+	const { colors,isHover,tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize,tickerTypho,tickerSection,alignment,containerBg,containerMargin,containerPadding,containerRadius} = attributes;
 
 	const mainSl = `#${id}`;
 	const tricker = `${mainSl} .tricker`;
 	const name = `${tricker} .name`;
 	const container=`${mainSl} .container`;
-	// .container{
-	// 	background-color: rgb(3, 3, 3);
-		
-	// }
+	const wrapper=`${mainSl} .wrapper`;
+	
 	
 
 	return <style dangerouslySetInnerHTML={{
@@ -39,14 +37,19 @@ ${getTypoCSS(name, tickerTypho)?.styles}
 		${container}{
 			width:${tickerSection};
 			background-color:${containerBg};
+			padding:${getBoxCSS(containerPadding)};
+			border-radius:${getBoxCSS(containerRadius)};
+			overflow:hidden;
 
 			
 			}
-			.wrapper{
+		${wrapper}{
 			width:100%;
 			display:flex;
 			justify-content:${alignment};
 			align-items:center;
+			margin:${getBoxCSS(containerMargin)};
+
 			}
 
 	`}} />;
