@@ -14,7 +14,7 @@
   margin-top: 0;
   margin-bottom: 1rem;
 }
-.wp-block-b-blocks-test-purpose .container-fluid {
+.wp-block-b-blocks-test-purpose .ticker-container-fluid {
   --bs-gutter-x:1.5rem;
   --bs-gutter-y:0;
   width: 100%;
@@ -74,9 +74,6 @@
 .wp-block-b-blocks-test-purpose .gap-4 {
   gap: 1rem !important;
 }
-.wp-block-b-blocks-test-purpose .fw-medium {
-  font-weight: 500 !important;
-}
 .wp-block-b-blocks-test-purpose .bi::before, .wp-block-b-blocks-test-purpose [class*=" bi-"]::before .container {
   -webkit-mask: linear-gradient(90deg, transparent, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent);
   mask: linear-gradient(90deg, transparent, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%, transparent);
@@ -122,9 +119,6 @@
 }
 .wp-block-b-blocks-test-purpose .container-max {
   margin-inline: auto;
-}
-.wp-block-b-blocks-test-purpose .container {
-  background-color: rgb(3, 3, 3);
 }
 .wp-block-b-blocks-test-purpose .tricker {
   display: flex;

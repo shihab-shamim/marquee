@@ -5,8 +5,9 @@ const MarqueeText = ({ attributes ,isShow,setAttributes}) => {
   
 
   return (
-    <div className="blend-x container">
-      <div className="container-fluid container-max">
+    <div className='wrapper'>
+      <div className="blend-x container">
+      <div className="ticker-container-fluid container-max">
         <div className="row">
           <div className="col-12">
             <div
@@ -58,6 +59,7 @@ const MarqueeText = ({ attributes ,isShow,setAttributes}) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

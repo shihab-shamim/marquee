@@ -131,6 +131,18 @@
     "tickerTypho": {
       "type": "object",
       "default": {}
+    },
+    "tickerSection": {
+      "type": "string",
+      "default": "100%"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "containerBg": {
+      "type": "string",
+      "default": "#030303"
     }
   },
   "supports": {

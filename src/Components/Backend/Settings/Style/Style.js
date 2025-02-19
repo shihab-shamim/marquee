@@ -7,9 +7,8 @@ import {
 import { ColorControl, ColorsControl, Typography } from "../../../../../../bpl-tools/Components";
 
 const Style = ({ attributes, setAttributes }) => {
-  const { tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize,tickerTypho} = attributes;
+  const { tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize,tickerTypho,tickerSection,containerBg} = attributes;
 
-console.log(tickerTypho);
 
 
   return (
@@ -20,6 +19,20 @@ console.log(tickerTypho);
     initialOpen={false}
     
     >
+       <UnitControl
+	onChange={ value => setAttributes({tickerSection: value})}
+	onUnitChange={ e => console.log("new unit") }
+	label="Icon Size"
+  units={[{ value: '%', label: '%' }]}
+  max={100}
+  min={30}
+
+	value={ tickerSection } />
+
+  <ColorControl value={containerBg} label={__("Background Color", "b-blocks")} onChange={(value)=>{
+    setAttributes({containerBg: value })
+  }} />
+      
 
     </PanelBody>
       <PanelBody

@@ -20,7 +20,7 @@ $primaryColor: #4527a4;
 	margin-top:0;
 	margin-bottom:1rem
 }
-.container-fluid
+.ticker-container-fluid
 {
 	--bs-gutter-x:1.5rem;
 	--bs-gutter-y:0;
@@ -97,10 +97,7 @@ $primaryColor: #4527a4;
 {
 	gap:1rem!important
 }
-.fw-medium
-{
-	font-weight:500!important
-}
+
 // text color
 // .text-light
 // {
@@ -235,9 +232,6 @@ $primaryColor: #4527a4;
 .container-max
 {
 	margin-inline:auto
-}
-.container{
-	background-color: rgb(3, 3, 3);
 }
 
 .tricker{

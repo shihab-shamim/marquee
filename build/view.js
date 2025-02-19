@@ -534,11 +534,20 @@ const Style = ({
     tickerRadius,
     tickerGap,
     iconSize,
-    tickerTypho
+    tickerTypho,
+    tickerSection,
+    alignment,
+    containerBg
   } = attributes;
   const mainSl = `#${id}`;
   const tricker = `${mainSl} .tricker`;
   const name = `${tricker} .name`;
+  const container = `${mainSl} .container`;
+  // .container{
+  // 	background-color: rgb(3, 3, 3);
+
+  // }
+
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", {
     dangerouslySetInnerHTML: {
       __html: `
@@ -546,7 +555,7 @@ const Style = ({
 ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(name, tickerTypho)?.styles}
 		
 		
-			.scroller-x__list:hover
+			.ticker-scroller-x__list:hover
 {
 	animation-play-state:${isHover ? "paused" : "running"}
 }
@@ -562,6 +571,18 @@ ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(name, tick
 		width:${iconSize};
 		height:${iconSize};
 		}
+		${container}{
+			width:${tickerSection};
+			background-color:${containerBg};
+
+			
+			}
+			.wrapper{
+			width:100%;
+			display:flex;
+			justify-content:${alignment};
+			align-items:center;
+			}
 
 	`
     }
@@ -598,9 +619,11 @@ const MarqueeText = ({
     trickers
   } = attributes;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "wrapper"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "blend-x container"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "container-fluid container-max"
+    className: "ticker-container-fluid container-max"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "row"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -657,7 +680,7 @@ const MarqueeText = ({
         trickers: (0,_bpl_tools_utils_functions__WEBPACK_IMPORTED_MODULE_2__.updateData)(trickers, value, index, 'name')
       });
     }
-  }))))))))));
+  })))))))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MarqueeText);
 
