@@ -28,7 +28,7 @@ const Style = ({ attributes, setAttributes }) => {
         <BoxControl label="Padding" values={tickerPadding} onChange={(value)=>{
           setAttributes({ tickerPadding: value })
         }} />
-        <BoxControl label="Radius" values={tickerRadius} onChange={(value)=>{
+        <BoxControl className="mt8" label="Radius" values={tickerRadius} onChange={(value)=>{
           setAttributes({ tickerRadius: value })
         }} />
         <UnitControl

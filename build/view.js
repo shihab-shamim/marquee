@@ -536,26 +536,24 @@ const Style = ({
     iconSize
   } = attributes;
   const mainSl = `#${id}`;
-  const blockSl = `${mainSl} .bBlocksTestPurpose`;
+  const tricker = `${mainSl} .tricker`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", {
     dangerouslySetInnerHTML: {
       __html: `
 		
-		${blockSl} p{
-			${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getColorsCSS)(colors)}
-		}
+		
 			.scroller-x__list:hover
 {
 	animation-play-state:${isHover ? "paused" : "running"}
 }
-	.tricker{
+	${tricker}{
 		${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getColorsCSS)(tickerColors)}
 		padding:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(tickerPadding)};
 		border-radius:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(tickerRadius)};
 		gap:${tickerGap};
 
 	}
-		.tricker svg{
+		${tricker} svg{
 		fill:${tickerIcon};
 		width:${iconSize};
 		height:${iconSize};

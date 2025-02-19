@@ -4,26 +4,24 @@ const Style = ({ attributes, id }) => {
 	const { colors,isHover,tickerColors,tickerPadding,tickerIcon,tickerRadius,tickerGap,iconSize} = attributes;
 
 	const mainSl = `#${id}`;
-	const blockSl = `${mainSl} .bBlocksTestPurpose`;
+	const tricker = `${mainSl} .tricker`;
 
 	return <style dangerouslySetInnerHTML={{
 		__html: `
 		
-		${blockSl} p{
-			${getColorsCSS(colors)}
-		}
+		
 			.scroller-x__list:hover
 {
 	animation-play-state:${isHover?"paused":"running"}
 }
-	.tricker{
+	${tricker}{
 		${getColorsCSS(tickerColors)}
 		padding:${getBoxCSS(tickerPadding)};
 		border-radius:${getBoxCSS(tickerRadius)};
 		gap:${tickerGap};
 
 	}
-		.tricker svg{
+		${tricker} svg{
 		fill:${tickerIcon};
 		width:${iconSize};
 		height:${iconSize};

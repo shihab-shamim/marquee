@@ -9,7 +9,7 @@ $primaryColor: #4527a4;
 	}
 
 
-		/*! CSS Used from: https://pixellyo.com/nextai/html/assets/css/bootstrap.css */*,::after,::before
+	*,::after,::before
 
 	ul
 {
@@ -25,8 +25,10 @@ $primaryColor: #4527a4;
 	--bs-gutter-x:1.5rem;
 	--bs-gutter-y:0;
 	width:100%;
-	padding-right:calc(var(--bs-gutter-x) * .5);
-	padding-left:calc(var(--bs-gutter-x) * .5);
+	// padding-right:calc(var(--bs-gutter-x) * .5);
+	// padding-left:calc(var(--bs-gutter-x) * .5);
+	padding-top: 50px;
+	padding-bottom: 50px;
 	margin-right:auto;
 	margin-left:auto
 }
@@ -120,7 +122,7 @@ $primaryColor: #4527a4;
 {
 	border-radius:var(--bs-border-radius-lg)!important
 }
-	/*! CSS Used from: https://pixellyo.com/nextai/html/assets/css/bootstrap-icons.css */.bi::before,[class*=" bi-"]::before
+	.bi::before,[class*=" bi-"]::before
 {
 	display:inline-block;
 	font-family:bootstrap-icons!important;
@@ -161,11 +163,24 @@ $primaryColor: #4527a4;
 {
 	content:"\f6b0"
 }
-	/*! CSS Used from: https://pixellyo.com/nextai/html/assets/css/style.css */.blend-x
-{
-	-webkit-mask: linear-gradient(90deg, transparent, rgba(109, 89, 89, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, transparent);
-	mask: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8)100%, transparent);
-}
+// .blend-x
+.container {
+	// background: black;
+	-webkit-mask: linear-gradient(
+	  90deg,
+	  transparent,
+	  rgba(255, 255, 255, 1) 20%,
+	  rgba(255, 255, 255, 1) 80%,
+	  transparent
+	);
+	mask: linear-gradient(
+	  90deg,
+	  transparent,
+	  rgba(255, 255, 255, 1) 0%,
+	  rgba(255, 255, 255, 1) 100%,
+	  transparent
+	);
+  }
 .list
 {
 	--direction:column;
@@ -221,36 +236,26 @@ $primaryColor: #4527a4;
 	margin-inline:auto
 }
 .container{
-	// background-color: #070707;
-	// border: 1px solid red;
+	background-color: rgb(3, 3, 3);
 }
-// .icon svg {
-//     width: 15px !important;
-//     height: 15px !important;
-// }
+
 .tricker{
-	// background-color: #191a1c;
-	// color: white;
-	// border: 1px solid red;
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	// gap: 0px;
+	
 	
 	
 }
-.name,.icon{
 
-
-
-}
 .add-ticker-btn {
-	width: 100%; /* Full width */
-	padding: 1rem 2rem; /* Padding for vertical and horizontal spacing */
-	font-size: 1.125rem; /* Larger text for readability */
-	font-weight: 600; /* Slightly bold text */
-	text-align: center; /* Center the text inside the button */
-	color: white; /* White text color */
+	width: 100%; 
+	padding: 1rem 2rem; 
+	font-size: 1.125rem; 
+	font-weight: 600;
+	text-align: center; 
+	color: white; 
 	background: linear-gradient(90deg, #4c6ef5,  #4c6ef5); 
 	border: none; 
 	border-radius: 0.75rem; 
@@ -317,10 +322,5 @@ $primaryColor: #4527a4;
 }
 
 }
-	@font-face
-{
-	font-display:block;
-	font-family:"bootstrap-icons";
-	src:url("https://pixellyo.com/nextai/html/assets/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6") format("woff2"), url("https://pixellyo.com/nextai/html/assets/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6") format("woff")
-}
+
 }
