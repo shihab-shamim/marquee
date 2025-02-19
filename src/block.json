@@ -3,11 +3,11 @@
 	"apiVersion": 3,
 	"name": "b-blocks/test-purpose",
 	"version": "1.0.0",
-	"title": "Marquee Text",
+	"title": "Ticker",
 	"category": "widgets",
-	"description": "Short description of the Test Purpose",
+	"description": "Dynamic ticker for urgent notifications and messages",
 	"keywords": [
-		"Marquee Text"
+		"Marquee Text","Ticker Plugins"
 	],
 	"textdomain": "b-blocks",
 	"attributes": {
